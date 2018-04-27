@@ -24,12 +24,12 @@
 			name: cookie 名
 			value: cookie 的 content
 			expiredays: cookie 在 expiredays 天后过期
-			path: cookie 的路径
+			path: cookie 的路径（如不设置则会默认设置为当前文件的路径）
 			domain: 设置 cookie 的页面域名
 			secure: cookie 的安全字段
 			*/
-			var exdate=new Date()
-			exdate.setDate(exdate.getDate()+expiredays)
+			var exdate=new Date();
+			exdate.setDate(exdate.getDate() + expiredays);
 			document.cookie = name + "=" + escape (value) +
 			((expiredays) ? "; expires=" + exdate.toGMTString() : "") +
 			((path) ? "; path=" + path : "") +
@@ -37,8 +37,8 @@
 			((secure) ? "; secure" : "");
 		},
 		deleteCookie:function(cookieName){
-			var exdate=new Date()
-			exdate.setDate(exdate.getDate() - 1)
+			var exdate=new Date();
+			exdate.setDate(exdate.getDate() - 1);
 			$.setCookie(cookieName, "", exdate);
 		}
 	});
