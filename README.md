@@ -11,8 +11,10 @@
 <script type="text/javascript">
 //设置 Cookie
 $.setCookie(name,value,expiredays,path,domain,secure);
+
 //获取 Cookie
 $.getCookie(name);
+
 //删除 Cookie
 $.deleteCookie(name);
 </script>
